@@ -1,0 +1,45 @@
+---
+title: "example"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{example}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(text2cat)
+```
+
+## Example
+
+### example data:
+
+```{r}
+
+my_text <- c("hello world.", "goodbye, cruel world ahrg")
+
+```
+
+### extract words:
+
+
+```{r}
+extract_words(my_text)
+
+```
+
+### count words:
+
+
+```{r}
+word_frequency(my_text)
+
+```
