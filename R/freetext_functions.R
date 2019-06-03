@@ -9,12 +9,12 @@
 #' @export
 extract_words <- function(free_text_vector) {
 
-free_text_vector <- str_replace_all(free_text_vector, pattern = "[[:punct:]]", " ")
-free_text_vector <- str_replace_all(free_text_vector, pattern = "\\s+", " ")
-free_text_vector <- str_to_title(free_text_vector)
-free_text_vector <- str_trim(free_text_vector, side = "right")
+free_text_vector <- stringr::str_replace_all(free_text_vector, pattern = "[[:punct:]]", " ")
+free_text_vector <- stringr::str_replace_all(free_text_vector, pattern = "\\s+", " ")
+free_text_vector <- stringr::str_to_title(free_text_vector)
+free_text_vector <- stringr::str_trim(free_text_vector, side = "right")
 
-list_words <- str_split(free_text_vector , pattern = " ")
+list_words <- stringr::str_split(free_text_vector , pattern = " ")
 
 return(list_words)
 }
